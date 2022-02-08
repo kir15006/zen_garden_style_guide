@@ -1,0 +1,85 @@
+@use './variables' as *;
+@use './atoms';
+@use './molecules';
+
+html {
+    background-color: $neutral;
+}
+
+body {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: $white;
+}
+
+header {
+    h1{
+        margin: 0;
+    }
+    .title {
+        font-size: 5rem;
+    }
+    align-items: center;
+}
+
+#color{
+    h1 {
+        grid-column: 1/4;
+    }
+    div {
+        border: 3px solid black;
+    }
+    h3{
+        text-align: center;
+    }
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.swatch-blue {
+    background-color: $accent1;
+    padding: 3rem;
+    margin: 0 1rem;
+}
+
+.swatch-tangerine {
+    background-color: $accent2;
+    padding: 3rem;
+    margin: 0 1rem;
+}
+
+.swatch-neutral {
+    background-color: $neutral;
+    padding: 3rem;
+    margin: 0 1rem;
+}
+
+
+.font-headline {
+    font-family: $font-headline;
+}
+
+section {
+    border: 5px solid $accent1;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.atom {
+    margin: 1rem;
+}
+
+.image-p {
+    background-color: grey;
+    @include atoms.set-text(1rem, white, $font-body);
+    padding: 0.5rem;
+}
+.wireframes {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+}
+.wireframes img {
+    max-width: 100%;
+}
